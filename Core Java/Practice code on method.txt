@@ -1,0 +1,29 @@
+Statement:
+A class has an integer data member 'i' and a method named 'printNum' to print thevalue of 'i'. Its subclass also has an integer data member 'j' and a method named 'printNum' 
+to print the value of 'j'. Make an object of the subclass and use it to assign a value to 'i' and to 'j'. Now call the method 'printNum' by this object.
+
+
+Code:
+class I{
+  int i;
+  public void printNum(){
+    System.out.println(i);
+  }
+}
+
+class J extends I{
+  int j;
+  public void printNum(){
+    System.out.println(j);
+  }
+}
+
+class Ans{
+  public static void main(String[] args){
+    J a = new J();
+    a.i = 5;
+    a.j = 7;
+    a.j = a.i;
+    a.printNum();
+  }
+}
